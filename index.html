@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaijus Inc — Press Kit</title>
+<meta name="description" content="Kaijus Inc: estrategia y construcción planetaria para PC. Un kaiju como central eléctrica. / Planetary strategy and construction for PC. A kaiju as a power plant.">
+<meta property="og:title" content="Kaijus Inc — Press Kit">
+<meta property="og:image" content="img/tapa.jpg">
+<link rel="icon" href="img/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400;0,700;1,400&family=Bungee&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Vegapunk";src:url("fonts/Vegapunk.otf") format("opentype");font-display:swap}
+:root{
+  --ink:#0d0a14; --paper:#f4ecd8; --mag:#ff2e88; --yel:#ffd400; --cyan:#22e6f0; --org:#ff7a1a; --violet:#4b2a7b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#1a1024}
+body{font-family:"Archivo Narrow",Arial Narrow,sans-serif;color:var(--ink);
+  background:
+   radial-gradient(circle at 1px 1px,rgba(255,255,255,.07) 1px,transparent 1.5px) 0 0/6px 6px,
+   linear-gradient(135deg,#1a1024,#2b1440 50%,#120a1c);
+  padding:28px 12px 60px}
+img{display:block;max-width:100%}
+.shot img{width:100%}
+/* language toggle */
+body.en .es, body.es .en{display:none !important}
+.langbar{position:fixed;top:12px;right:12px;z-index:50;display:flex;font-family:"Press Start 2P",monospace;font-size:10px;box-shadow:4px 4px 0 #000}
+.langbar button{border:3px solid #000;background:var(--yel);padding:8px 10px;cursor:pointer;font:inherit}
+.langbar button.on{background:var(--mag);color:#fff}
+
+.page{max-width:1100px;margin:0 auto 40px;background:var(--paper);position:relative;overflow:hidden;
+  box-shadow:0 0 0 1px #000,14px 14px 0 rgba(0,0,0,.55);
+  background-image:radial-gradient(rgba(0,0,0,.05) 1px,transparent 1.2px);background-size:4px 4px}
+.folio{display:flex;justify-content:space-between;font-family:"Press Start 2P",monospace;font-size:9px;letter-spacing:1px;
+  padding:10px 22px;background:var(--ink);color:var(--yel)}
+
+/* ---------- COVER ---------- */
+.cover{background:#000;color:#fff;min-height:880px;display:grid;grid-template-rows:auto 1fr auto}
+.cover .art{position:absolute;inset:0;background:url(img/tapa.jpg) center 35%/cover;filter:saturate(1.25) contrast(1.08)}
+.cover .art::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0) 60%,rgba(0,0,0,.85) 100%),
+  repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+.mast{position:relative;padding:18px 26px 0;display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.mast h1{font-family:"Bungee",sans-serif;font-size:clamp(80px,15vw,170px);line-height:.85;letter-spacing:4px;
+  color:var(--yel);text-shadow:4px 4px 0 var(--mag),8px 8px 0 #000}
+.mast .issue{font-family:"Press Start 2P",monospace;font-size:10px;line-height:1.9;color:#fff;padding-bottom:10px}
+.mast .issue b{color:var(--cyan)}
+.coverbody{position:relative;padding:0 26px;display:flex;flex-direction:column;justify-content:flex-end}
+.logo{font-family:"Vegapunk","Bungee",sans-serif;font-size:clamp(64px,12vw,150px);line-height:.9;
+  color:var(--cyan);text-shadow:0 0 18px rgba(34,230,240,.7),5px 5px 0 #062a33,9px 9px 0 #000;letter-spacing:2px}
+.tagline{font-family:"Anton",sans-serif;font-size:clamp(22px,3vw,34px);color:var(--org);text-transform:uppercase;
+  text-shadow:3px 3px 0 #000;margin:6px 0 18px}
+.burst{position:absolute;top:150px;right:40px;width:190px;height:190px;display:grid;place-items:center;text-align:center;
+  background:var(--yel);color:var(--ink);transform:rotate(12deg);font-family:"Anton",sans-serif;font-size:26px;line-height:1;
+  clip-path:polygon(50% 0,61% 13%,77% 5%,80% 22%,97% 24%,90% 40%,100% 52%,88% 63%,94% 80%,77% 81%,72% 98%,57% 88%,44% 100%,36% 85%,19% 93%,18% 76%,1% 70%,10% 55%,0 41%,15% 32%,10% 15%,28% 15%,34% 0);
+  animation:pulse 1.6s ease-in-out infinite}
+.burst span{display:block;font-size:15px;font-family:"Archivo Narrow";font-weight:700}
+@keyframes pulse{50%{transform:rotate(12deg) scale(1.06)}}
+.coverlines{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:4px solid var(--yel)}
+.coverlines div{padding:14px 18px;background:rgba(0,0,0,.72);border-right:2px dashed rgba(255,212,0,.5)}
+.coverlines div:last-child{border-right:0}
+.coverlines b{display:block;font-family:"Anton";font-size:24px;text-transform:uppercase;color:var(--mag);line-height:1}
+.coverlines p{font-size:16px;margin-top:4px}
+.barcode{position:absolute;bottom:118px;right:26px;background:#fff;color:#000;padding:6px 8px 4px;font-family:"Press Start 2P";font-size:7px;text-align:center}
+.barcode i{display:block;height:38px;width:110px;margin-bottom:4px;
+  background:repeating-linear-gradient(90deg,#000 0 2px,#fff 2px 3px,#000 3px 4px,#fff 4px 7px,#000 7px 10px,#fff 10px 11px)}
+
+/* ---------- ARTICLE ---------- */
+.inner{padding:30px 34px 38px}
+.kicker{display:inline-block;font-family:"Press Start 2P";font-size:10px;background:var(--mag);color:#fff;padding:7px 10px;transform:rotate(-2deg);box-shadow:3px 3px 0 #000}
+.headline{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(40px,6.5vw,80px);line-height:.92;margin:14px 0 10px;
+  background:linear-gradient(180deg,var(--violet),#c2187a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.deck{font-size:22px;font-style:italic;max-width:780px;border-left:8px solid var(--yel);padding-left:14px;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
+.cols{column-count:2;column-gap:26px;font-size:18px;line-height:1.38;text-align:justify;hyphens:auto}
+.cols p{margin-bottom:12px}
+.cols p.drop::first-letter{float:left;font-family:"Bungee";font-size:66px;line-height:.8;padding:6px 8px 0 0;color:var(--mag)}
+.cols strong{background:linear-gradient(transparent 55%,rgba(255,212,0,.7) 55%)}
+.shot{position:relative;border:6px solid #fff;box-shadow:6px 6px 0 #000;background:#000}
+.shot figcaption{position:absolute;left:-6px;bottom:-26px;max-width:92%;background:var(--yel);font-weight:700;font-size:15px;padding:6px 10px;box-shadow:3px 3px 0 #000;line-height:1.2}
+.tilt-l{transform:rotate(-2.5deg)} .tilt-r{transform:rotate(2deg)}
+.specs{background:var(--ink);color:#fff;padding:18px;box-shadow:6px 6px 0 var(--mag)}
+.specs h3{font-family:"Press Start 2P";font-size:12px;color:var(--yel);margin-bottom:14px;line-height:1.5}
+.specs dl{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;font-size:17px}
+.specs dt{color:var(--cyan);font-weight:700;text-transform:uppercase;font-size:14px;padding-top:2px}
+.side{display:flex;flex-direction:column;gap:46px}
+.quote{font-family:"Anton";font-size:30px;line-height:1.05;text-transform:uppercase;color:var(--violet);border-top:6px solid var(--org);border-bottom:6px solid var(--org);padding:12px 0}
+
+/* ---------- HOW TO PLAY ---------- */
+.dark{background:#120b1c;color:#f3eefc;background-image:radial-gradient(rgba(34,230,240,.08) 1px,transparent 1.3px);background-size:5px 5px}
+.dark .headline{background:linear-gradient(180deg,var(--cyan),#2f7cff);-webkit-background-clip:text;background-clip:text}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0 40px}
+.step{border:3px solid var(--cyan);padding:16px;position:relative;background:rgba(34,230,240,.06)}
+.step .n{position:absolute;top:-20px;left:12px;font-family:"Bungee";font-size:34px;color:var(--yel);text-shadow:3px 3px 0 var(--mag)}
+.step h4{font-family:"Anton";font-size:26px;text-transform:uppercase;margin:12px 0 6px;color:var(--cyan)}
+.step p{font-size:16px;line-height:1.35}
+.spread{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start}
+.dark .shot{border-color:var(--cyan);box-shadow:6px 6px 0 var(--mag)}
+.dark .shot figcaption{background:var(--cyan);color:var(--ink)}
+.boxout{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.feat{background:var(--yel);color:var(--ink);padding:20px 22px;box-shadow:6px 6px 0 var(--mag);transform:rotate(-.6deg)}
+.feat h3{font-family:"Bungee";font-size:24px;margin-bottom:10px}
+.feat ul{list-style:none;font-size:17px;line-height:1.35}
+.feat li{padding-left:24px;position:relative;margin-bottom:7px}
+.feat li::before{content:"★";position:absolute;left:0;color:var(--mag)}
+
+/* ---------- STATUS / PUBLISHERS ---------- */
+.meter{margin:10px 0 16px}
+.meter label{display:flex;justify-content:space-between;font-family:"Press Start 2P";font-size:9px;margin-bottom:6px}
+.bar{height:22px;border:3px solid #000;background:#fff;box-shadow:3px 3px 0 #000}
+.bar i{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--mag) 0 10px,#ff5ba5 10px 20px)}
+.bar i.c{background:repeating-linear-gradient(45deg,#13b8c2 0 10px,var(--cyan) 10px 20px)}
+.bar i.y{background:repeating-linear-gradient(45deg,#e6b800 0 10px,var(--yel) 10px 20px)}
+.ask{background:var(--ink);color:#fff;padding:24px;box-shadow:8px 8px 0 var(--org)}
+.ask h3{font-family:"Anton";font-size:34px;text-transform:uppercase;color:var(--yel);line-height:1;margin-bottom:12px}
+.ask p{font-size:18px;line-height:1.4;margin-bottom:10px}
+.cta{display:inline-block;margin-top:8px;font-family:"Press Start 2P";font-size:11px;background:var(--mag);color:#fff;text-decoration:none;padding:14px 16px;border:3px solid #fff;box-shadow:4px 4px 0 var(--cyan)}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--cyan)}
+.credits{font-size:14px;color:#cbbfdc;text-align:center;max-width:1100px;margin:0 auto;line-height:1.5}
+
+
+.alert{margin:50px 0 26px;display:inline-block;font-family:"Anton";font-size:30px;letter-spacing:1px;color:#fff;padding:8px 18px 8px 54px;
+  background:repeating-linear-gradient(-45deg,#ff2e4d 0 10px,#b3122b 10px 20px) left/40px 100% no-repeat,#5a0a18;border:3px solid #ff2e4d;box-shadow:0 0 18px rgba(255,46,77,.6),5px 5px 0 #000;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{border-color:#ffd400}}
+.waves{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:auto auto;gap:44px 30px}
+.waves .w-big{grid-row:span 2;align-self:center}
+.wavecopy{font-size:19px;line-height:1.4;max-width:820px;margin-top:46px;border-left:6px solid #ff2e4d;padding-left:14px}
+.boxout.one{grid-template-columns:1fr}
+.boxout.one .feat ul{column-count:2;column-gap:30px}
+.shot img{cursor:zoom-in}
+.shot::after{content:"⤢";position:absolute;top:6px;right:8px;font-size:18px;color:#fff;background:rgba(0,0,0,.6);width:28px;height:28px;display:grid;place-items:center;pointer-events:none;opacity:0;transition:opacity .2s}
+.shot:hover::after{opacity:1}
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:100;background:rgba(8,4,14,.97);backdrop-filter:blur(6px);display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px 70px}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:calc(100vh - 110px);border:4px solid #fff;box-shadow:8px 8px 0 var(--mag);background:#000}
+#lb .cap{margin-top:16px;color:#fff;font-size:18px;text-align:center;max-width:900px}
+#lb .cap b{font-family:"Press Start 2P";font-size:10px;color:var(--yel);margin-right:10px}
+#lb button{position:absolute;font-family:"Press Start 2P";font-size:16px;background:var(--yel);color:#000;border:3px solid #000;box-shadow:4px 4px 0 #000;width:48px;height:48px;cursor:pointer}
+#lb .x{top:16px;right:16px}
+#lb .prev{left:12px;top:50%}
+#lb .next{right:12px;top:50%}
+#lb .dl{position:absolute;bottom:16px;right:16px;font-family:"Press Start 2P";font-size:9px;color:var(--cyan)}
+@media (max-width:820px){.waves{grid-template-columns:1fr}.waves .w-big{grid-row:auto}.boxout.one .feat ul{column-count:1}#lb{padding:60px 8px}#lb .prev,#lb .next{top:auto;bottom:14px}#lb .prev{left:14px}#lb .next{right:auto;left:76px}}
+@media (max-width:820px){
+  .grid,.spread,.boxout{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:30px}
+  .cols{column-count:1}
+  .coverlines{grid-template-columns:1fr}
+  .burst{width:140px;height:140px;font-size:19px;top:130px;right:14px}
+  .barcode{display:none}
+  .inner{padding:24px 18px 34px}
+}
+</style>
+</head>
+<body class="es">
+
+<div class="langbar" role="group" aria-label="Idioma / Language">
+  <button id="b-es" class="on" onclick="setLang('es')">ES</button>
+  <button id="b-en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- =============== TAPA / COVER =============== -->
+<section class="page cover">
+  <div class="art" role="img" aria-label="Kaiju reina dentro del anillo de contención"></div>
+  <header class="mast">
+    <h1>LYNX</h1>
+    <div class="issue">
+      <span class="es">EDICIÓN ESPECIAL · <b>PRESS KIT</b><br>PC · ESTRATEGIA · NOV 2026</span>
+      <span class="en">SPECIAL ISSUE · <b>PRESS KIT</b><br>PC · STRATEGY · NOV 2026</span>
+    </div>
+  </header>
+
+  <div class="burst"><div><span class="es">¡PRIMERAS</span><span class="en">FIRST</span>
+    <b class="es">IMÁGENES!</b><b class="en">LOOK!</b></div></div>
+
+  <div class="coverbody">
+    <div class="logo">KAIJUS INC</div>
+    <div class="tagline">
+      <span class="es">Tu central eléctrica tiene seis patas y mal carácter</span>
+      <span class="en">Your power plant has six legs and a bad temper</span>
+    </div>
+  </div>
+
+  <div class="barcode"><i></i>KAIJUS-INC-001</div>
+
+  <div class="coverlines">
+    <div><b class="es">Capturá a la reina</b><b class="en">Capture the queen</b>
+      <p class="es">Torres, emisores y un campo de contención que tiembla con cada latido.</p>
+      <p class="en">Towers, emitters and a containment field that shakes with every heartbeat.</p></div>
+    <div><b class="es">Minar · Construir · Defender</b><b class="en">Mine · Build · Defend</b>
+      <p class="es">Una colonia automatizada con drones, sitiada por las crías.</p>
+      <p class="en">A drone-run colony under siege by the brood.</p></div>
+    <div><b class="es">Un planeta entero</b><b class="en">A whole planet</b>
+      <p class="es">Del suelo a la órbita en un solo zoom. Cinco regiones y un sector oculto.</p>
+      <p class="en">From ground to orbit in one zoom. Five regions and a hidden sector.</p></div>
+  </div>
+</section>
+
+<!-- =============== PREVIEW =============== -->
+<section class="page">
+  <div class="folio"><span>LYNX</span><span class="es">PREVIEW · PÁG. 2</span><span class="en">PREVIEW · PAGE 2</span></div>
+  <div class="inner">
+    <span class="kicker">PREVIEW · PC</span>
+    <h2 class="headline es">¿Y si la central eléctrica fuera un monstruo?</h2>
+    <h2 class="headline en">What if the power plant were a monster?</h2>
+    <p class="deck es">Kaijus Inc mezcla construcción de colonias al estilo de los grandes juegos de gestión planetaria con una idea tan simple como peligrosa: encerrar a un kaiju gigante y vivir de su energía.</p>
+    <p class="deck en">Kaijus Inc blends planetary colony-building with an idea as simple as it is dangerous: lock up a giant kaiju and live off its energy.</p>
+
+    <div class="grid">
+      <div>
+        <div class="cols es">
+          <p class="drop">Aterrizás de emergencia en un planeta hostil con un núcleo de mando, un par de drones y pocos recursos. Abajo, el suelo late con un ritmo que no es el de los motores. Esa es la primera pista de lo que duerme bajo la colonia.</p>
+          <p>La base crece en vista isométrica 3D: minas, extractores, baterías, talleres y depósitos. <strong>Los drones hacen todo el trabajo</strong>: construyen, prospectan, transportan y reparan. Tu tarea es planificar, priorizar y decidir.</p>
+          <p>Hasta que el sismógrafo se vuelve loco. La criatura emerge del foso y la colonia tiene que <strong>diseñar su captura</strong>: sala de control, torres de anclaje y emisores que forman un aro de estática holográfica. Si una torre cae, el campo se abre.</p>
+          <p>Con la reina cautiva llega la energía... y la venganza de sus crías. Cadetes, voladores y cascarudos atacan en oleadas cada vez más grandes. La demo pide <strong>minar, construir y defender</strong>: torretas, barreras, minas terrestres y una economía que tiene que aguantar el asedio.</p>
+          <p>Más adelante, una coordenada revela un sector oculto donde se crían los kaijus mineros. Se puede invadir y armar un <strong>corral holográfico</strong> donde esas criaturas producen metal y silicato para tu industria. ¿Cuántos monstruos se pueden domesticar antes de que el planeta diga basta?</p>
+        </div>
+        <div class="cols en">
+          <p class="drop">You crash-land on a hostile planet with a command core, a couple of drones and scarce resources. Below, the ground beats with a rhythm that isn't the engines'. That's the first hint of what sleeps beneath the colony.</p>
+          <p>The base grows in 3D isometric view: mines, extractors, batteries, workshops and depots. <strong>Drones do all the work</strong>: they build, prospect, haul and repair. Your job is to plan, prioritize and decide.</p>
+          <p>Until the seismograph goes wild. The creature emerges from the pit and the colony must <strong>engineer its capture</strong>: a control room, anchor towers and emitters that weave a ring of holographic static. Lose a tower and the field breaks open.</p>
+          <p>With the queen caged comes the power... and her brood's revenge. Cadets, flyers and shell-backs strike in ever-larger waves. The demo is about <strong>mining, building and defending</strong>: turrets, barriers, land mines and an economy that has to survive the siege.</p>
+          <p>Later, a coordinate reveals a hidden sector where mining kaijus are bred. Invade it and build a <strong>holographic corral</strong> where those creatures produce metal and silicate for your industry. How many monsters can you tame before the planet fights back?</p>
+        </div>
+      </div>
+
+      <aside class="side">
+        <div class="specs">
+          <h3 class="es">FICHA TÉCNICA</h3><h3 class="en">FACT SHEET</h3>
+          <dl>
+            <dt class="es">Género</dt><dt class="en">Genre</dt>
+            <dd class="es">Construcción, gestión y defensa</dd><dd class="en">Builder, management &amp; defense</dd>
+            <dt class="es">Plataforma</dt><dt class="en">Platform</dt><dd>PC</dd>
+            <dt class="es">Vista</dt><dt class="en">View</dt>
+            <dd class="es">Isométrica 3D + vista orbital</dd><dd class="en">3D isometric + orbital view</dd>
+            <dt class="es">Motor</dt><dt class="en">Engine</dt><dd>Godot 4.7</dd>
+            <dt class="es">Idiomas</dt><dt class="en">Languages</dt>
+            <dd class="es">Español, inglés</dd><dd class="en">Spanish, English</dd>
+            <dt class="es">Estado</dt><dt class="en">Status</dt>
+            <dd class="es">Prototipo jugable, demo en armado</dd><dd class="en">Playable prototype, demo in progress</dd>
+            <dt class="es">Lanzamiento</dt><dt class="en">Release</dt><dd>TBA</dd>
+          </dl>
+        </div>
+        <figure class="shot tilt-r">
+          <img src="img/reina.jpg" data-full="img/reina.png" alt="La reina kaiju dentro del campo de contención">
+          <figcaption class="es">La reina, presa en el aro de estática. Cada emisor la mantiene a raya.</figcaption>
+          <figcaption class="en">The queen, trapped in the static ring. Each emitter keeps her in check.</figcaption>
+        </figure>
+        <p class="quote es">“Encerrá al monstruo. Enchufalo. Rezá.”</p>
+        <p class="quote en">“Cage the monster. Plug it in. Pray.”</p>
+      </aside>
+    </div>
+
+    <figure class="shot tilt-l" style="margin-top:40px">
+      <img src="img/contencion.jpg" data-full="img/contencion.png" alt="Vista general del anillo de contención y la colonia">
+      <figcaption class="es">De noche, el anillo de contención ilumina toda la colonia.</figcaption>
+      <figcaption class="en">At night, the containment ring lights up the whole colony.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- =============== CÓMO SE JUEGA / HOW IT PLAYS =============== -->
+<section class="page dark">
+  <div class="folio"><span>LYNX</span><span class="es">CÓMO SE JUEGA · PÁG. 3</span><span class="en">HOW IT PLAYS · PAGE 3</span></div>
+  <div class="inner">
+    <span class="kicker">GAMEPLAY</span>
+    <h2 class="headline es">Del barro a la órbita</h2>
+    <h2 class="headline en">From the dirt to orbit</h2>
+
+    <div class="steps">
+      <div class="step"><span class="n">01</span>
+        <h4 class="es">Minar</h4><h4 class="en">Mine</h4>
+        <p class="es">Drones de prospección descubren depósitos de metal y silicato; los de carga los llevan a los núcleos.</p>
+        <p class="en">Prospector drones find metal and silicate deposits; haulers carry them back to the cores.</p></div>
+      <div class="step"><span class="n">02</span>
+        <h4 class="es">Construir</h4><h4 class="en">Build</h4>
+        <p class="es">Colocás hologramas y los constructores levantan la obra solos. Todo se puede desmontar y recuperar.</p>
+        <p class="en">Place holograms and builder drones raise them on their own. Anything can be dismantled and recycled.</p></div>
+      <div class="step"><span class="n">03</span>
+        <h4 class="es">Capturar</h4><h4 class="en">Capture</h4>
+        <p class="es">Investigás pulsos de contención y armás el anillo antes de que la criatura rompa la superficie.</p>
+        <p class="en">Research containment pulses and build the ring before the creature breaks the surface.</p></div>
+      <div class="step"><span class="n">04</span>
+        <h4 class="es">Defender</h4><h4 class="en">Defend</h4>
+        <p class="es">Torretas, drones de ataque y minas contra oleadas de crías que no dejan de crecer.</p>
+        <p class="en">Turrets, attack drones and mines against ever-growing waves of brood.</p></div>
+    </div>
+
+    <div class="spread">
+      <figure class="shot tilt-l">
+        <img src="img/planeta.jpg" data-full="img/planeta.png" alt="Vista orbital del planeta con sus regiones">
+        <figcaption class="es">Seguí alejando el zoom: atravesás la atmósfera y ves el planeta entero.</figcaption>
+        <figcaption class="en">Keep zooming out: break through the atmosphere and see the whole planet.</figcaption>
+      </figure>
+      <figure class="shot tilt-r" style="margin-top:30px">
+        <img src="img/investigacion.jpg" data-full="img/investigacion.png" alt="Panel de investigación">
+        <figcaption class="es">Investigar abre misiones nuevas: acá, la pista del sector oculto.</figcaption>
+        <figcaption class="en">Research unlocks new missions: here, the lead to the hidden sector.</figcaption>
+      </figure>
+    </div>
+
+
+    <div class="alert"><span class="es">⚠ ALERTA: OLEADA ENTRANTE</span><span class="en">⚠ WARNING: INCOMING WAVE</span></div>
+    <div class="waves">
+      <figure class="shot w-big tilt-l">
+        <img src="img/oleada_3.jpg" data-full="img/oleada_3.png" alt="Drones de ataque y kaijus intercambian disparos entre las mesetas">
+        <figcaption class="es">Al amanecer, drones de ataque y escupitajos de lava se cruzan entre las mesetas.</figcaption>
+        <figcaption class="en">At dawn, attack drones and lava spit cross fire between the mesas.</figcaption>
+      </figure>
+      <figure class="shot tilt-r">
+        <img src="img/oleada_1.jpg" data-full="img/oleada_1.png" alt="Una torreta dispara contra un kaiju">
+        <figcaption class="es">Una torreta frena a un kaiju que viene a la carga.</figcaption>
+        <figcaption class="en">A turret stops a charging kaiju in its tracks.</figcaption>
+      </figure>
+      <figure class="shot tilt-l">
+        <img src="img/oleada_2.jpg" data-full="img/oleada_2.png" alt="Un cascarudo ataca la base con un pulso de cortocircuito">
+        <figcaption class="es">Un cascarudo suelta un pulso de cortocircuito: hay que mandar drones a reparar.</figcaption>
+        <figcaption class="en">A shell-back unleashes a short-circuit pulse: send in the repair drones.</figcaption>
+      </figure>
+    </div>
+    <p class="wavecopy es">Las crías atacan por oleadas cada vez más grandes: cadetes que cargan por tierra, voladores que escupen lava desde el aire y cascarudos enormes, duros y con triple ataque, capaces de dejar fuera de combate a tus drones. Cada oleada pone a prueba dónde pusiste las torretas, cuántos drones de reparación tenés y si tu economía aguanta el ritmo.</p>
+    <p class="wavecopy en">The brood attacks in ever-larger waves: cadets charging on foot, flyers spitting lava from above and huge, tough shell-backs with a triple attack that can knock your drones out cold. Every wave tests where you placed your turrets, how many repair drones you have and whether your economy can keep up.</p>
+    <div class="boxout one">
+      <div class="feat">
+        <h3 class="es">LO QUE TRAE</h3><h3 class="en">WHAT'S INSIDE</h3>
+        <ul class="es">
+          <li>Una criatura gigante como fuente de energía: la mecánica central gira en torno a ella.</li>
+          <li>Economía automatizada con drones constructores, de carga, prospección, reparación y ataque.</li>
+          <li>Sismos que dañan la colonia y obligan a reparar bajo presión.</li>
+          <li>Cinco regiones con avanzadas propias y recursos globales.</li>
+          <li>Interfaz holográfica de realidad aumentada y ciclo de día y noche.</li>
+          <li>Modelos, animaciones y shaders propios; sonido sintetizado por código.</li>
+        </ul>
+        <ul class="en">
+          <li>A giant creature as your power source: the core mechanic revolves around it.</li>
+          <li>Automated economy with builder, hauler, prospector, repair and attack drones.</li>
+          <li>Earthquakes that damage the colony and force repairs under pressure.</li>
+          <li>Five regions with their own outposts and shared global resources.</li>
+          <li>Augmented-reality holographic UI and a day/night cycle.</li>
+          <li>Original models, animation and shaders; procedurally synthesized sound.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============== PUBLISHERS =============== -->
+<section class="page">
+  <div class="folio"><span>LYNX</span><span class="es">EXCLUSIVO PARA PUBLISHERS · PÁG. 4</span><span class="en">PUBLISHERS ONLY · PAGE 4</span></div>
+  <div class="inner">
+    <span class="kicker es">ESTADO DEL PROYECTO</span><span class="kicker en">PROJECT STATUS</span>
+    <h2 class="headline es">Busca publisher</h2>
+    <h2 class="headline en">Seeking a publisher</h2>
+
+    <div class="grid">
+      <div>
+        <figure class="shot tilt-l" style="margin-bottom:46px">
+          <img src="img/hud.jpg" data-full="img/hud.png" alt="La colonia en plena partida con la interfaz de recursos">
+          <figcaption class="es">Partida en curso: recursos, producción por segundo y misión activa siempre a la vista.</figcaption>
+          <figcaption class="en">Live game: resources, per-second production and the active mission always on screen.</figcaption>
+        </figure>
+
+        <div class="meter"><label><span class="es">ACTO 1 · EL CORAZÓN DESPIERTA</span><span class="en">ACT 1 · THE HEART AWAKENS</span><span class="es">COMPLETO</span><span class="en">DONE</span></label><div class="bar"><i class="c" style="width:100%"></i></div></div>
+        <div class="meter"><label><span class="es">DEMO PARA PUBLISHERS</span><span class="en">PUBLISHER DEMO</span><span class="es">EN ARMADO</span><span class="en">IN PROGRESS</span></label><div class="bar"><i style="width:65%"></i></div></div>
+        <div class="meter"><label><span class="es">LOCALIZACIÓN ES / EN</span><span class="en">ES / EN LOCALIZATION</span><span class="es">LISTA</span><span class="en">READY</span></label><div class="bar"><i class="y" style="width:100%"></i></div></div>
+      </div>
+
+      <aside class="side">
+        <div class="ask">
+          <h3 class="es">Qué buscamos</h3><h3 class="en">What we're looking for</h3>
+          <p class="es">Un publisher y financiamiento para llevar el prototipo a un juego completo: más regiones, más especies de kaijus y una campaña más larga.</p>
+          <p class="en">A publisher and funding to take the prototype to a full game: more regions, more kaiju species and a longer campaign.</p>
+          <p class="es">La demo se centra en el núcleo de la experiencia: <b>minar, construir y defender</b>, desde el aterrizaje hasta el asedio final a la celda de la reina.</p>
+          <p class="en">The demo focuses on the core experience: <b>mine, build and defend</b>, from the landing to the final siege at the queen's cell.</p>
+          <!-- TODO Nicolás: reemplazar con tu email real -->
+          <a class="cta" href="mailto:lynx.animacion@gmail.com"><span class="es">PEDIR LA DEMO ►</span><span class="en">REQUEST THE DEMO ►</span></a>
+        </div>
+        <div class="specs">
+          <h3 class="es">EL ESTUDIO</h3><h3 class="en">THE STUDIO</h3>
+          <p class="es" style="font-size:17px;line-height:1.4">Desarrollado por <b>LYNX</b>, un equipo independiente. Modelos, animaciones y arte originales del juego.</p>
+          <p class="en" style="font-size:17px;line-height:1.4">Developed by <b>LYNX</b>, an independent team. Original models, animation and art for the game.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<p class="credits">
+  <span class="es">Press kit de Kaijus Inc, por LYNX. El formato de revista es un homenaje a las revistas de juegos de los 90. Todas las imágenes son capturas del prototipo en desarrollo.</span>
+  <span class="en">Kaijus Inc press kit, by LYNX. The magazine format is a tribute to 90s game magazines. All images are captures from the in-development prototype.</span>
+</p>
+
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Imagen a tamaño completo">
+  <button class="x" aria-label="Cerrar">✕</button>
+  <button class="prev" aria-label="Anterior">◄</button>
+  <img alt="">
+  <p class="cap"></p>
+  <button class="next" aria-label="Siguiente">►</button>
+  <a class="dl" target="_blank" rel="noopener">PNG ↗</a>
+</div>
+<script>
+function setLang(l){
+  document.body.className=l; document.documentElement.lang=l;
+  document.getElementById('b-es').classList.toggle('on',l==='es');
+  document.getElementById('b-en').classList.toggle('on',l==='en');
+  try{localStorage.setItem('ki-lang',l)}catch(e){}
+}
+(function(){var l;try{l=localStorage.getItem('ki-lang')}catch(e){}
+  if(!l){l=(navigator.language||'es').slice(0,2)==='es'?'es':'en'} setLang(l)})();
+
+(function(){
+  var lb=document.getElementById('lb'), big=lb.querySelector('img'), cap=lb.querySelector('.cap'), dl=lb.querySelector('.dl');
+  var items=[].slice.call(document.querySelectorAll('.shot img[data-full]')), cur=0;
+  function caption(img){
+    var lang=document.body.className, f=img.closest('figure'), c=f&&f.querySelector('figcaption.'+lang);
+    return c?c.textContent:img.alt;
+  }
+  function show(i){
+    cur=(i+items.length)%items.length; var im=items[cur];
+    big.src=im.getAttribute('data-full'); big.alt=im.alt; dl.href=big.src;
+    cap.innerHTML='<b>'+(cur+1)+' / '+items.length+'</b>'; cap.appendChild(document.createTextNode(caption(im)));
+  }
+  function open(i){show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; lb.querySelector('.x').focus();}
+  function close(){lb.classList.remove('open'); document.body.style.overflow=''; big.removeAttribute('src');}
+  items.forEach(function(im,i){im.addEventListener('click',function(){open(i)})});
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.prev').onclick=function(e){e.stopPropagation();show(cur-1)};
+  lb.querySelector('.next').onclick=function(e){e.stopPropagation();show(cur+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowLeft')show(cur-1); else if(e.key==='ArrowRight')show(cur+1);
+  });
+})();
+</script>
+</body>
+</html>
